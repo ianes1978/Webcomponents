@@ -11,10 +11,18 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="test1">dddd</div>
-    <my-esempio1 nome="roberto"></my-esempio1>
-    <my-esempio2 nome="luca"></my-esempio2>
-    <my-esempio3 nome="andrea"></my-esempio3>
+    <input onkeyup="aggiorna(this)"></input>
+    <div id="test1"></div>
+    <my-esempio1 id="esempio1" nome="webcomponent"></my-esempio1>
+    <my-esempio2 id="esempio2" nome="webcomponent con lit-html"></my-esempio2>
+    <my-esempio3 id="esempio3" nome="webcomponent con lit-element"></my-esempio3>
 </body>
+<script>
+function aggiorna(e){
+    document.getElementById("esempio1").setAttribute("nome", e.value);
+    document.getElementById("esempio2").setAttribute("nome", e.value);
+    document.getElementById("esempio3").setAttribute("nome", e.value);
+}
 
+</script>
 </html>
